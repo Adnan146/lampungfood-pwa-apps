@@ -2,7 +2,7 @@ import FoodSource from '../../data/food-source';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import FavoriteFoodIdb from '../../data/food-idb';
-import { createfoodDetailTemplate } from '../templates/template-creator';
+import { createFoodDetailTemplate } from '../templates/template-creator';
 import PostReview from '../../utils/post-review';
 
 const Detail = {
@@ -35,7 +35,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await FoodSource.foodDetail(url.id);
     const restaurantContainer = document.querySelector('#detail-rest');
-    restaurantContainer.innerHTML = createfoodDetailTemplate(
+    restaurantContainer.innerHTML = createFoodDetailTemplate(
       restaurant.restaurant,
     );
 

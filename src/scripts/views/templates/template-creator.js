@@ -4,7 +4,7 @@ const createFoodItemTemplate = (restaurant) => `
 <article tabindex="0" class="resto-item">
   <a href="/#/detail/${restaurant.id}">
     <div class="resto-item_content">
-    <img class="resto-item_image"src="${
+    <img class="resto-item_image" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="Gambar ${restaurant.name}" tabindex="0"/>
       <p tabindex="0" class="resto-item_city" alt="kota restoran">${
@@ -25,11 +25,11 @@ const createFoodItemTemplate = (restaurant) => `
 </article>
 `;
 
-const createfoodDetailTemplate = (restaurant) => `
+const createFoodDetailTemplate = (restaurant) => `
 <div class="detail">
   <div tabindex="0" class="container-info">
     <div class="img-container">
-    <img class="resto-item_image-container"src="${
+    <img class="resto-item_image-container" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
 }" alt="Gambar ${restaurant.name}" tabindex="0"/>
     </div>
@@ -72,8 +72,8 @@ const createfoodDetailTemplate = (restaurant) => `
             <ul class="restaurant-detail__foods">
               ${restaurant.menus.foods
     .map(
-      (map) => `
-              <li><i class="fa fa-cutlery font-decoration"></i> ${map.name}</li>`,
+      (food) => `
+              <li><i class="fa fa-cutlery font-decoration"></i> ${food.name}</li>`,
     )
     .join('')}
             </ul>
@@ -125,7 +125,7 @@ const createUnlikeButtonTemplate = () => `
 
 export {
   createFoodItemTemplate,
-  createfoodDetailTemplate,
+  createFoodDetailTemplate,
   createLikeButtonTemplate,
   createUnlikeButtonTemplate,
 };

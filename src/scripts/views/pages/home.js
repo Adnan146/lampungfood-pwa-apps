@@ -6,7 +6,7 @@ const Food = {
     return `
     <main tabindex="0" id="content" class="main-content>
       <section class="content">
-        <h2 tabindex="0" class="main-resto_label">
+        <h2 tabindex="0" class="main-food_label">
           Explore Restaurant dan Caffe
         </h2>
         <div id="list-food" class="list-food"></div>

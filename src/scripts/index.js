@@ -5,7 +5,7 @@ import App from './views/app';
 import swRegister from './utils/sw-register';
 
 const app = new App({
-  button: document.querySelector('#navbar'),
+  button: document.querySelector('#menuhp'),
   drawer: document.querySelector('#navmenu'),
   content: document.querySelector('#konten'),
 });
